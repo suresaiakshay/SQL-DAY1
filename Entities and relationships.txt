@@ -1,0 +1,15 @@
+Entity						Attributes
+---------					      ------------------
+Customers		customer_id, name, email, phone, address
+Products			product_id, product_name, description, price, stock_quantity
+Orders			order_id, customer_id (FK), order_date, total_amount
+Order_Items		order_item_id, order_id (FK), product_id (FK), quantity, price
+Payments		payment_id, order_id (FK), payment_date, amount, payment_method
+
+
+Relationships:
+---------------------
+One Customer can place many Orders
+Each Order has many Order_Items
+Each Order_Item is linked to one Product
+Each Order has one Payment
